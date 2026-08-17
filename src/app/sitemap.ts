@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://tazakkagroupservice.com' // Replace with actual domain
+  const baseUrl = 'https://tazakkagroup.vercel.app' // Update to .com later
 
   // Since this is a single page application mostly (with fragments), 
   // we focus on the primary routes and specific anchors if necessary.

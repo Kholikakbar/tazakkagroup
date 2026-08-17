@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: "https://tazakkagroupservice.com", // update with actual URL if known
+    canonical: "https://tazakkagroup.vercel.app", // update to .com later
   },
 };
 
@@ -57,9 +57,9 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "Tazakka Group Service",
-  "image": "https://tazakkagroupservice.com/images/logo.png",
-  "@id": "https://tazakkagroupservice.com",
-  "url": "https://tazakkagroupservice.com",
+  "image": "https://tazakkagroup.vercel.app/images/logo.png",
+  "@id": "https://tazakkagroup.vercel.app",
+  "url": "https://tazakkagroup.vercel.app",
   "telephone": "+6285135465355",
   "address": {
     "@type": "PostalAddress",
