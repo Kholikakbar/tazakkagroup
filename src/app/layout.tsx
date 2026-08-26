@@ -20,6 +20,11 @@ export const metadata: Metadata = {
   title: "Tazakka Group Service | Service HP, Laptop & PC Cakung, Jakarta Timur",
   description:
     "Tazakka Group Service (TGS) melayani perbaikan HP, Laptop, Komputer, dan Printer di area Cakung, Jakarta Timur hingga seluruh Jabodetabek. Pengerjaan cepat, transparan, dan bergaransi.",
+
+  verification: {
+    google: "Ix6MLUUFYl5d7E8kmIm9BZIpWTyELdvSNGdThI9waMA",
+  },
+
   keywords: [
     "service hp cakung",
     "service laptop jakarta timur",
@@ -30,7 +35,7 @@ export const metadata: Metadata = {
     "tazakka group service",
     "ganti lcd hp jakarta",
     "upgrade ssd laptop",
-    "repair hp jakarta timur"
+    "repair hp jakarta timur",
   ],
   openGraph: {
     title: "Tazakka Group Service | Service HP & Laptop Cakung, Jakarta Timur",
