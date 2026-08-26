@@ -16,94 +16,208 @@ const inter = Inter({
   display: "swap",
 });
 
+/* =========================
+   SEO METADATA
+========================= */
+
 export const metadata: Metadata = {
-  title: "Tazakka Group Service | Service HP, Laptop & PC Cakung, Jakarta Timur",
+  metadataBase: new URL("https://tazakkagroup.vercel.app"),
+
+  title: {
+    default:
+      "Tazakka Group Service | Service HP, Laptop, Komputer & Printer Cakung",
+    template: "%s | Tazakka Group Service",
+  },
+
   description:
-    "Tazakka Group Service (TGS) melayani perbaikan HP, Laptop, Komputer, dan Printer di area Cakung, Jakarta Timur hingga seluruh Jabodetabek. Pengerjaan cepat, transparan, dan bergaransi.",
+    "Tazakka Group Service melayani service HP, laptop, komputer, PC, dan printer di Cakung, Jakarta Timur. Melayani ganti LCD, upgrade SSD, cleaning, perbaikan, instalasi Windows, dan berbagai kebutuhan komputer.",
+
+  keywords: [
+    "service hp cakung",
+    "service hp jakarta timur",
+    "service laptop cakung",
+    "service laptop jakarta timur",
+    "service komputer cakung",
+    "service komputer jakarta timur",
+    "service printer cakung",
+    "service printer jakarta timur",
+    "service pc cakung",
+    "rakit pc cakung",
+    "service hp terdekat",
+    "service laptop terdekat",
+    "service komputer terdekat",
+    "ganti lcd hp cakung",
+    "ganti lcd hp jakarta timur",
+    "upgrade ssd laptop",
+    "upgrade ssd cakung",
+    "repair hp jakarta timur",
+    "tazakka group service",
+  ],
+
+  authors: [
+    {
+      name: "Tazakka Group Service",
+    },
+  ],
+
+  creator: "Tazakka Group Service",
+  publisher: "Tazakka Group Service",
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
 
   verification: {
     google: "Ix6MLUUFYl5d7E8kmIm9BZIpWTyELdvSNGdThI9waMA",
   },
 
-  keywords: [
-    "service hp cakung",
-    "service laptop jakarta timur",
-    "service pc jabodetabek",
-    "rakit pc cakung",
-    "tempat service hp terdekat",
-    "service printer jakarta timur",
-    "tazakka group service",
-    "ganti lcd hp jakarta",
-    "upgrade ssd laptop",
-    "repair hp jakarta timur",
-  ],
+  alternates: {
+    canonical: "https://tazakkagroup.vercel.app/",
+  },
+
   openGraph: {
-    title: "Tazakka Group Service | Service HP & Laptop Cakung, Jakarta Timur",
+    title:
+      "Tazakka Group Service | Service HP, Laptop, Komputer & Printer Cakung",
     description:
-      "Layanan service profesional untuk HP, Laptop, PC & Printer di Cakung, Jakarta Timur. Tersedia layanan antar-jemput se-Jabodetabek. Bergaransi 100%.",
-    type: "website",
-    locale: "id_ID",
+      "Service HP, laptop, komputer, PC dan printer di Cakung, Jakarta Timur. Pengerjaan transparan, profesional dan bergaransi.",
+
+    url: "https://tazakkagroup.vercel.app/",
     siteName: "Tazakka Group Service",
+    locale: "id_ID",
+    type: "website",
+
     images: [
       {
         url: "/images/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Tazakka Group Service Banner",
+        alt: "Tazakka Group Service - Service HP Laptop Komputer Printer Cakung",
       },
     ],
   },
-  alternates: {
-    canonical: "https://tazakkagroup.vercel.app", // update to .com later
+
+  twitter: {
+    card: "summary_large_image",
+    title:
+      "Tazakka Group Service | Service HP, Laptop, Komputer & Printer Cakung",
+    description:
+      "Service HP, laptop, komputer, PC dan printer di Cakung, Jakarta Timur.",
+    images: ["/images/og-image.png"],
+  },
+
+  icons: {
+    icon: "/favicon.ico",
   },
 };
+
+/* =========================
+   LOCAL BUSINESS SCHEMA
+========================= */
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "name": "Tazakka Group Service",
-  "image": "https://tazakkagroup.vercel.app/images/logo.png",
-  "@id": "https://tazakkagroup.vercel.app",
-  "url": "https://tazakkagroup.vercel.app",
-  "telephone": "+6285135465355",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Jl. Kp. Jemb. Jl. Marzuki 2 No.20, RT.6/RW.17, Penggilingan",
-    "addressLocality": "Kec. Cakung",
-    "addressRegion": "Jakarta Timur",
-    "postalCode": "13940",
-    "addressCountry": "ID"
-  },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": -6.2088, // placeholder, update if exact known
-    "longitude": 106.9242
-  },
-  "areaServed": [
-    "Cakung",
-    "Jakarta Timur",
-    "Jabodetabek",
-    "Jakarta",
-    "Bekasi",
-    "Depok"
+
+  name: "Tazakka Group Service",
+
+  url: "https://tazakkagroup.vercel.app/",
+
+  "@id": "https://tazakkagroup.vercel.app/#business",
+
+  image: [
+    "https://tazakkagroup.vercel.app/images/logo.png",
+    "https://tazakkagroup.vercel.app/images/og-image.png",
   ],
-  "openingHoursSpecification": {
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": [
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday"
-    ],
-    "opens": "09:00",
-    "closes": "20:00"
+
+  telephone: "+6285135465355",
+
+  priceRange: "$$",
+
+  address: {
+    "@type": "PostalAddress",
+    streetAddress:
+      "Jl. Kp. Jemb. Jl. Marzuki 2 No.20, RT.6/RW.17, Penggilingan",
+    addressLocality: "Cakung",
+    addressRegion: "Jakarta Timur",
+    postalCode: "13940",
+    addressCountry: "ID",
   },
-  "priceRange": "$$"
+
+  areaServed: [
+    {
+      "@type": "City",
+      name: "Cakung",
+    },
+    {
+      "@type": "AdministrativeArea",
+      name: "Jakarta Timur",
+    },
+    {
+      "@type": "AdministrativeArea",
+      name: "Jakarta",
+    },
+    {
+      "@type": "AdministrativeArea",
+      name: "Bekasi",
+    },
+    {
+      "@type": "AdministrativeArea",
+      name: "Depok",
+    },
+    {
+      "@type": "Place",
+      name: "Jabodetabek",
+    },
+  ],
+
+  serviceType: [
+    "Service HP",
+    "Service Laptop",
+    "Service Komputer",
+    "Service PC",
+    "Service Printer",
+    "Ganti LCD HP",
+    "Upgrade SSD Laptop",
+    "Install Windows",
+    "Cleaning Laptop",
+    "Cleaning Komputer",
+    "Rakit PC",
+  ],
+
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+      ],
+      opens: "09:00",
+      closes: "20:00",
+    },
+  ],
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+/* =========================
+   ROOT LAYOUT
+========================= */
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html
       lang="id"
@@ -111,9 +225,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     >
       <body className="min-h-full flex flex-col font-[var(--font-plus-jakarta)]">
         {children}
+
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(jsonLd),
+          }}
         />
       </body>
     </html>
