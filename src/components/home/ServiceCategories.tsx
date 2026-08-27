@@ -7,8 +7,11 @@ import { ArrowRight } from "lucide-react";
 const services = [
   {
     id: "hp",
-    title: "Service HP / Smartphone",
+    title: "Service HP Cakung & Jakarta Timur",
+    description:
+      "Melayani perbaikan HP dan smartphone di Cakung, Penggilingan, dan wilayah Jakarta Timur.",
     image: "/images/service-hp.png",
+    alt: "Service HP Cakung Jakarta Timur - Tazakka Group Service",
     color: "from-red-500 to-rose-600",
     items: [
       "Ganti Layar / LCD",
@@ -23,7 +26,10 @@ const services = [
   {
     id: "laptop",
     title: "Service Laptop",
+    description:
+      "Perbaikan dan perawatan laptop untuk kebutuhan kerja, sekolah, maupun penggunaan sehari-hari.",
     image: "/images/service-laptop.png",
+    alt: "Service Laptop Tazakka Group Service",
     color: "from-blue-500 to-indigo-600",
     items: [
       "Deep Cleaning & Re-Pasta",
@@ -38,7 +44,10 @@ const services = [
   {
     id: "pc",
     title: "Service PC / Rakit PC",
+    description:
+      "Service komputer, troubleshooting, upgrade komponen, dan rakit PC sesuai kebutuhan.",
     image: "/images/service-pc.png",
+    alt: "Service PC dan Rakit PC Tazakka Group Service",
     color: "from-purple-500 to-violet-600",
     items: [
       "Rakit PC Custom (Gaming/Office)",
@@ -53,7 +62,10 @@ const services = [
   {
     id: "printer",
     title: "Service Printer",
+    description:
+      "Perbaikan dan perawatan printer untuk kebutuhan rumah, kantor, sekolah, dan usaha.",
     image: "/images/service-printer.png",
+    alt: "Service Printer Tazakka Group Service",
     color: "from-orange-500 to-amber-600",
     items: [
       "Service Catridge",
@@ -69,21 +81,30 @@ const services = [
 
 export default function ServiceCategories() {
   return (
-    <section className="py-12 md:py-20 bg-white" id="service-categories">
+    <section
+      className="py-12 md:py-20 bg-white"
+      id="service-categories"
+      aria-labelledby="service-categories-title"
+    >
       <div className="max-w-7xl mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-10 md:mb-14">
           <div className="inline-block bg-tgs-red/10 text-tgs-red text-xs font-bold px-4 py-1.5 rounded-full mb-3 uppercase tracking-wider">
             Layanan Kami
           </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-tgs-dark mb-3">
-            4 Pilar Utama{" "}
-            <span className="text-tgs-red">Tazakka Group Service</span>
+
+          <h2
+            id="service-categories-title"
+            className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-tgs-dark mb-3"
+          >
+            Service HP, Laptop, Komputer & Printer{" "}
+            <span className="text-tgs-red">di Cakung</span>
           </h2>
+
           <p className="text-sm md:text-base text-tgs-gray-text max-w-2xl mx-auto leading-relaxed">
-            Kami menyediakan layanan service profesional untuk berbagai
-            perangkat elektronik Anda dengan teknisi berpengalaman dan sparepart
-            berkualitas.
+            Tazakka Group Service melayani service HP, laptop, komputer, dan
+            printer di Cakung, Penggilingan, dan Jakarta Timur dengan teknisi
+            berpengalaman serta sparepart berkualitas.
           </p>
         </div>
 
@@ -99,14 +120,16 @@ export default function ServiceCategories() {
               <div className="relative h-48 overflow-hidden">
                 <Image
                   src={service.image}
-                  alt={service.title}
+                  alt={service.alt}
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                 />
+
                 <div
                   className={`absolute inset-0 bg-gradient-to-t ${service.color} opacity-0 group-hover:opacity-60 transition-opacity duration-300`}
                 />
+
                 {/* Hover overlay icon */}
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <div className="w-14 h-14 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center">
@@ -117,9 +140,14 @@ export default function ServiceCategories() {
 
               {/* Card Content */}
               <div className="p-5">
-                <h3 className="text-base md:text-lg font-bold text-tgs-dark mb-3 group-hover:text-tgs-red transition-colors">
+                <h3 className="text-base md:text-lg font-bold text-tgs-dark mb-2 group-hover:text-tgs-red transition-colors">
                   {service.title}
                 </h3>
+
+                <p className="text-xs md:text-sm text-tgs-gray-text leading-relaxed mb-4">
+                  {service.description}
+                </p>
+
                 <ul className="space-y-1.5 mb-5">
                   {service.items.map((item, i) => (
                     <li
@@ -131,8 +159,10 @@ export default function ServiceCategories() {
                     </li>
                   ))}
                 </ul>
+
                 <Link
                   href={service.href}
+                  aria-label={`Lihat layanan ${service.title}`}
                   className="inline-flex items-center gap-1.5 text-sm font-semibold text-tgs-red hover:text-tgs-red-hover group/link transition-colors"
                 >
                   Lihat Layanan
