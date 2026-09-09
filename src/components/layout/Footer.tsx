@@ -56,22 +56,38 @@ export default function Footer() {
             {/* Contacts */}
             <div className="space-y-5">
               <div>
-                <p className="text-sm text-tgs-gray-text mb-1">WhatsApp</p>
-                <div className="flex items-center gap-2 text-tgs-gray-text text-sm">
-                  <MessageCircle className="w-4 h-4" />
-                  <a href="https://wa.me/6285135465355" target="_blank" rel="noopener noreferrer" className="hover:text-tgs-red transition-colors duration-200">
-                    0851-3546-5355
-                  </a>
+                <p className="text-sm text-tgs-gray-text mb-2">WhatsApp</p>
+                <div className="space-y-1.5">
+                  <div className="flex items-center gap-2 text-tgs-gray-text text-sm">
+                    <MessageCircle className="w-4 h-4 shrink-0" />
+                    <a href="https://wa.me/6285135465355" target="_blank" rel="noopener noreferrer" className="hover:text-tgs-red transition-colors duration-200">
+                      0851-3546-5355 <span className="text-xs text-tgs-gray-text/70">(Jakarta Timur)</span>
+                    </a>
+                  </div>
+                  <div className="flex items-center gap-2 text-tgs-gray-text text-sm">
+                    <MessageCircle className="w-4 h-4 shrink-0" />
+                    <a href="https://wa.me/6285138945861" target="_blank" rel="noopener noreferrer" className="hover:text-tgs-red transition-colors duration-200">
+                      0851-3894-5861 <span className="text-xs text-tgs-gray-text/70">(Bekasi)</span>
+                    </a>
+                  </div>
                 </div>
               </div>
 
               <div>
-                <p className="text-sm text-tgs-gray-text mb-1">Telepon</p>
-                <div className="flex items-center gap-2 text-tgs-gray-text text-sm">
-                  <Phone className="w-4 h-4" />
-                  <a href="tel:+6285135465355" className="hover:text-tgs-red transition-colors duration-200">
-                    0851-3546-5355
-                  </a>
+                <p className="text-sm text-tgs-gray-text mb-2">Telepon</p>
+                <div className="space-y-1.5">
+                  <div className="flex items-center gap-2 text-tgs-gray-text text-sm">
+                    <Phone className="w-4 h-4 shrink-0" />
+                    <a href="tel:+6285135465355" className="hover:text-tgs-red transition-colors duration-200">
+                      0851-3546-5355 <span className="text-xs text-tgs-gray-text/70">(Jakarta Timur)</span>
+                    </a>
+                  </div>
+                  <div className="flex items-center gap-2 text-tgs-gray-text text-sm">
+                    <Phone className="w-4 h-4 shrink-0" />
+                    <a href="tel:+6285138945861" className="hover:text-tgs-red transition-colors duration-200">
+                      0851-3894-5861 <span className="text-xs text-tgs-gray-text/70">(Bekasi)</span>
+                    </a>
+                  </div>
                 </div>
               </div>
 
