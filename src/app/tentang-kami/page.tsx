@@ -53,7 +53,7 @@ const milestones = [
   { year: "2023", event: "Tazakka Group Service didirikan di Jakarta Timur" },
   { year: "2024", event: "Mulai menerima service dari luar kota via ekspedisi" },
   { year: "2025", event: "Memperluas layanan ke Rakit PC Custom & Service Printer" },
-  { year: "2026", event: "Meluncurkan website resmi dengan fitur tracking real-time" },
+  { year: "2026", event: "Membuka cabang baru di Bekasi untuk menjangkau lebih banyak pelanggan" },
 ];
 
 export default function TentangKamiPage() {
