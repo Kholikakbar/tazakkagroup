@@ -7,7 +7,7 @@ import { X, MapPin } from "lucide-react";
 const branches = [
   {
     name: "Jakarta Timur",
-    address: "Jl. Raya Pal Meriam, Cakung, Jakarta Timur",
+    address: "Jl. Kp. Jemb. Jl. Marzuki 2 No.20, Penggilingan, Cakung",
     phone: "6285135465355",
     color: "from-red-500 to-red-600",
   },
