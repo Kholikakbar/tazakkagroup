@@ -31,7 +31,7 @@ const outlets: Outlet[] = [
     phoneLink: "6285135465355",
     mapsQuery: "Tazakka%20Group%20Service%20Jl.%20Kp.%20Jemb.%20Jl.%20Marzuki%202%20No.20",
     mapsSearch: "Tazakka+Group+Service+Cakung",
-    embedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.4894441290084!2d106.93432!3d-6.2196893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698c100872b03b%3A0xe0429ae58e7e6e47!2sTazakka%20Group%20Service!5e0!3m2!1sid!2sid!4v1689117480265!5m2!1sid!2sid",
+    embedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126905.33321336276!2d106.80464835280476!3d-6.291090495988052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698b687dd0be4f%3A0xd40c5c940ddd4512!2sTazakka%20Group%20Service!5e0!3m2!1sen!2sid!4v1789118376490!5m2!1sen!2sid",
   },
   {
     id: "bekasi",
@@ -77,8 +77,8 @@ export default function OutletLocation() {
               key={o.id}
               onClick={() => setActiveTab(idx)}
               className={`flex items-center gap-2.5 px-6 py-3 rounded-xl text-sm font-bold transition-all duration-300 cursor-pointer border ${activeTab === idx
-                  ? "bg-tgs-red text-white border-tgs-red shadow-lg shadow-tgs-red/20"
-                  : "bg-white text-tgs-dark border-tgs-gray-medium hover:border-tgs-red/40 hover:text-tgs-red"
+                ? "bg-tgs-red text-white border-tgs-red shadow-lg shadow-tgs-red/20"
+                : "bg-white text-tgs-dark border-tgs-gray-medium hover:border-tgs-red/40 hover:text-tgs-red"
                 }`}
             >
               <Building2 className="w-4 h-4" />
