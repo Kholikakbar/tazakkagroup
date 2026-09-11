@@ -31,7 +31,7 @@ const outlets: Outlet[] = [
     phoneLink: "6285135465355",
     mapsQuery: "Tazakka%20Group%20Service%20Jl.%20Kp.%20Jemb.%20Jl.%20Marzuki%202%20No.20",
     mapsSearch: "Tazakka+Group+Service+Cakung",
-    embedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126905.33321336276!2d106.80464835280476!3d-6.291090495988052!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698b687dd0be4f%3A0xd40c5c940ddd4512!2sTazakka%20Group%20Service!5e0!3m2!1sen!2sid!4v1789118376490!5m2!1sen!2sid",
+    embedUrl: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7932.754434348591!2d106.92710770966829!3d-6.213881320813007!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698b687dd0be4f%3A0xd40c5c940ddd4512!2sTazakka%20Group%20Service!5e0!3m2!1sen!2sid!4v1789118631955!5m2!1sen!2sid",
   },
   {
     id: "bekasi",
