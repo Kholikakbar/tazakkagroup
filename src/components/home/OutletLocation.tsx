@@ -14,6 +14,7 @@ interface Outlet {
   phoneLink: string;
   mapsQuery: string;
   mapsSearch: string;
+  embedUrl: string;
   streetViewLink?: string;
 }
 
@@ -21,7 +22,7 @@ const outlets: Outlet[] = [
   {
     id: "jakarta",
     city: "Jakarta Timur",
-    name: "TGS Cakung",
+    name: "TGS Jakarta",
     address:
       "Jl. Kp. Jemb. Jl. Marzuki 2 No.20, RT.6/RW.17, Penggilingan, Kec. Cakung, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13940",
     hours: "Senin - Sabtu: 09:00 - 21:00 WIB",
@@ -30,6 +31,7 @@ const outlets: Outlet[] = [
     phoneLink: "6285135465355",
     mapsQuery: "Tazakka%20Group%20Service%20Jl.%20Kp.%20Jemb.%20Jl.%20Marzuki%202%20No.20",
     mapsSearch: "Tazakka+Group+Service+Cakung",
+    embedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.4894441290084!2d106.93432!3d-6.2196893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698c100872b03b%3A0xe0429ae58e7e6e47!2sTazakka%20Group%20Service!5e0!3m2!1sid!2sid!4v1689117480265!5m2!1sid!2sid",
   },
   {
     id: "bekasi",
@@ -42,7 +44,8 @@ const outlets: Outlet[] = [
     phone: "0851-3894-5861",
     phoneLink: "6285138945861",
     mapsQuery: "Tazakka%20Group%20Service%20Jatiasih",
-    mapsSearch: "Tazakka+Group+Service+Jatiasih",
+    mapsSearch: "Tazakka+group+service+bekasi",
+    embedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.813458686249!2d106.95389399999999!3d-6.2882335!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698d3fd9483ec5%3A0xa0bbf3c0c1442809!2sTazakka%20group%20service%20bekasi!5e0!3m2!1sid!2sid!4v1789117480265!5m2!1sid!2sid",
     streetViewLink: "https://maps.app.goo.gl/TYhYXFvRHXkZkTjZ6",
   },
 ];
@@ -73,11 +76,10 @@ export default function OutletLocation() {
             <button
               key={o.id}
               onClick={() => setActiveTab(idx)}
-              className={`flex items-center gap-2.5 px-6 py-3 rounded-xl text-sm font-bold transition-all duration-300 cursor-pointer border ${
-                activeTab === idx
+              className={`flex items-center gap-2.5 px-6 py-3 rounded-xl text-sm font-bold transition-all duration-300 cursor-pointer border ${activeTab === idx
                   ? "bg-tgs-red text-white border-tgs-red shadow-lg shadow-tgs-red/20"
                   : "bg-white text-tgs-dark border-tgs-gray-medium hover:border-tgs-red/40 hover:text-tgs-red"
-              }`}
+                }`}
             >
               <Building2 className="w-4 h-4" />
               {o.city}
@@ -149,11 +151,11 @@ export default function OutletLocation() {
           <div className="lg:w-2/3 min-h-[300px] md:min-h-[400px] relative">
             <iframe
               key={outlet.id}
-              src={`https://maps.google.com/maps?q=${outlet.mapsQuery}&t=&z=16&ie=UTF8&iwloc=&output=embed`}
+              src={outlet.embedUrl}
               className="absolute inset-0 w-full h-full border-0 grayscale-[20%] contrast-[1.1]"
-              allowFullScreen={false}
+              allowFullScreen
               loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
+              referrerPolicy="strict-origin-when-cross-origin"
             ></iframe>
           </div>
         </div>
